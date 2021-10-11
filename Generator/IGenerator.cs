@@ -2,10 +2,10 @@
 
 namespace Generator
 {
-    public interface IGenerator<out T, in TU>
+    public interface IGenerator
     {
-        T Generate();
-
-        T Generate(TU min, TU max);
+        Type Type { get; }
+        object Generate();
     }
+
 }
