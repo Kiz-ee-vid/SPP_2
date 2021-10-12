@@ -15,7 +15,7 @@ namespace CustomGenerators
         {
             CarBrands = new List<string>()
             {
-                "Audi", "Lada Vesta", "Toyota", "Ford", "Nissan", "Renault"
+                "Audi", "Lada Vesta", "Toyota", "Ford", "Nissan", "Renault","BMW","Mersedes"
             };
         }
 
