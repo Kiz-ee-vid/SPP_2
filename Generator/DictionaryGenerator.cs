@@ -38,5 +38,11 @@ namespace Generator
             return result;
         }
 
+        public static ICollectionGenerator GetCollectionGenerator(Type type)
+        {
+            CollectionGenerators.TryGetValue(type, out var result);
+            return result;
+        }
+
     }
 }

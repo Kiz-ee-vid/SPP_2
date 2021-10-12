@@ -1,12 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Generator.Primitive
 {
-    class IntGenerator
+    public class IntGenerator : IGenerator
     {
+        public Type Type => typeof(int);
+
+        private readonly Random _random;
+
+        public IntGenerator(Random random)
+        {
+            _random = random;
+        }
+
+        public object Generate()
+        {
+            return _random.Next(int.MinValue, int.MaxValue);
+        }
+
     }
 }

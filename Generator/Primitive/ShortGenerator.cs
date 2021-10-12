@@ -1,5 +1,4 @@
 ﻿using System;
-using Generator.SDK;
 
 namespace Generator.Primitive
 {
