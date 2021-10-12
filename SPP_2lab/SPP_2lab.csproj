@@ -6,10 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Generator\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\CustomGenerators\CustomGenerators.csproj" />
     <ProjectReference Include="..\FakerLibrary\FakerLibrary.csproj" />
   </ItemGroup>
 
