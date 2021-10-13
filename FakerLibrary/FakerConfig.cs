@@ -6,7 +6,7 @@ using Generator;
 
 namespace FakerLibrary
 {
-    public class FakerConfig : IFakerConfig
+    public class FakerConfig
     {
         private readonly Dictionary<MemberInfo, IGenerator> _generators = new();
 

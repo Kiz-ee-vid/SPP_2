@@ -20,8 +20,6 @@ namespace Generator
             {
                 var assembly = Assembly.LoadFile(Path.Combine(Directory.GetCurrentDirectory(), file));
 
-                Console.WriteLine(Directory.GetCurrentDirectory());
-
                 var pluginTypes = assembly.GetTypes()
                     .Where(t => typeof(IGenerator).IsAssignableFrom(t) && !t.IsInterface)
                     .ToArray();

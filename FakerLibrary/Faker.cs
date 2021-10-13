@@ -8,13 +8,13 @@ namespace FakerLibrary
     public class Faker
     {
         private readonly CycleDependencyResolver _resolver = new();
-        private readonly IFakerConfig _config;
+        private readonly FakerConfig _config;
 
         public Faker()
         {
         }
 
-        public Faker(IFakerConfig config)
+        public Faker(FakerConfig config)
         {
             _config = config;
         }

@@ -12,7 +12,7 @@ namespace SPP_2lab
         {
             var config = new FakerConfig();
 
-            config.Add<C, string, CarBrandsGenerator>(c => c.Brand);
+            config.Add<A, string, CarBrandsGenerator>(a => a.Brand);
             var faker = new Faker(config);
 
             var user = faker.Create<A>();
@@ -28,6 +28,8 @@ namespace SPP_2lab
     {
         public double DoubleProperty { get; }
         public short ShortField;
+        public string Brand;
+        public List<DateTime> DatesProperty { get; set; }
 
         public B B;
 
@@ -53,9 +55,7 @@ namespace SPP_2lab
 
     internal class C
     {
-        public List<DateTime> DatesProperty { get; set; }
         public string RandomString { get; set; }
-        public string Brand;
         public A A;
 
     }

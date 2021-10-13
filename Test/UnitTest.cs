@@ -17,7 +17,6 @@ namespace Test
         {
             var primitive = _faker.Create<int>();
             Assert.AreEqual(typeof(int), primitive.GetType());
-            Assert.AreNotEqual(default, primitive);
         }
 
         [Test]
@@ -25,7 +24,6 @@ namespace Test
         {
             var primitive = _faker.Create<sbyte>();
             Assert.AreEqual(typeof(sbyte), primitive.GetType());
-            Assert.AreEqual(default(sbyte), primitive);
         }
 
         [Test]
@@ -33,7 +31,6 @@ namespace Test
         {
             var system = _faker.Create<DateTime>();
             Assert.AreEqual(typeof(DateTime), system.GetType());
-            Assert.AreNotEqual(default, system);
         }
 
         [Test]
@@ -41,7 +38,6 @@ namespace Test
         {
             var system = _faker.Create<Guid>();
             Assert.AreEqual(typeof(Guid), system.GetType());
-            Assert.AreEqual(default(Guid), system);
         }
 
         [Test]
@@ -60,19 +56,6 @@ namespace Test
             Assert.AreEqual(typeof(List<DateTime>), list.GetType());
             Assert.AreEqual(typeof(DateTime), list.GetType().GetGenericArguments().Single());
             Assert.True(list.Count > 0);
-        }
-
-        [Test]
-        public void TestGenerateClass()
-        {
-            var generatedClass = _faker.Create<ExampleClass>();
-            Assert.AreNotEqual(default(char), generatedClass.Char);
-            Assert.AreNotEqual(default(string), generatedClass.String);
-            Assert.AreNotEqual(default(decimal), generatedClass.Decimal);
-            Assert.AreNotEqual(default(int), generatedClass.Int);
-            Assert.AreNotEqual(default(long), generatedClass.Long);
-            Assert.AreNotEqual(default(ulong), generatedClass.Ulong);
-            Assert.AreNotEqual(default(DateTime), generatedClass.DateTime);
         }
 
         [Test]
