@@ -56,6 +56,7 @@ namespace SPP_2lab
     internal class C
     {
         public string RandomString { get; set; }
+        public long LongField;
         public A A;
 
     }

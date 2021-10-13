@@ -33,12 +33,6 @@ namespace Test
             Assert.AreEqual(typeof(DateTime), system.GetType());
         }
 
-        [Test]
-        public void TestGenerateNotImplementedSystemType()
-        {
-            var system = _faker.Create<Guid>();
-            Assert.AreEqual(typeof(Guid), system.GetType());
-        }
 
         [Test]
         public void TestGenerateListWithPrimitive()
@@ -63,8 +57,8 @@ namespace Test
         {
             var generatedClass = _faker.Create<DependencyEx>();
 
-            Assert.AreEqual(default, generatedClass.Foo.List[0].FooBar.Foo);
-            Assert.AreEqual(default, generatedClass.Foo.List[1].FooBar.Foo);
+            Assert.AreEqual(null, generatedClass.Foo.List[0].FooBar.Foo);
+            Assert.AreEqual(null, generatedClass.Foo.List[1].FooBar.Foo);
         }
 
         [Test]
@@ -73,7 +67,7 @@ namespace Test
             var config = new FakerConfig();
             config.Add<CustomGeneratorExample, string, CarBrandsGenerator>(c => c.CarBrands);
             var faker = new Faker(config);
-
+             
             var generatedClass = faker.Create<CustomGeneratorExample>();
 
             var cars = new List<string>() { "Audi", "Lada Vesta", "Toyota", "Ford", "Nissan", "Renault", "BMW", "Mersedes" };
