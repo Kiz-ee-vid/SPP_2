@@ -88,14 +88,14 @@ namespace Test
         public void TestCustomGenerator()
         {
             var config = new FakerConfig();
-            config.Add<CustomGeneratorExample, string, CarBrandsGenerator>(c => c.Name);
+            config.Add<CustomGeneratorExample, string, CarBrandsGenerator>(c => c.CarBrands);
             var faker = new Faker(config);
 
             var generatedClass = faker.Create<CustomGeneratorExample>();
 
             var cars = new List<string>() { "Audi", "Lada Vesta", "Toyota", "Ford", "Nissan", "Renault", "BMW", "Mersedes" };
 
-            Assert.True(cars.Contains(generatedClass.Name));
+            Assert.True(cars.Contains(generatedClass.CarBrands));
 
             Assert.False(cars.Contains(generatedClass.RandomString));
         }

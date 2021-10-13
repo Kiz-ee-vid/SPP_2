@@ -5,7 +5,7 @@ namespace FakerLibrary
 {
     public class CycleDependencyResolver
     {
-        private const string Message = "[WARN] Cycle dependency detected";
+        private const string Message = "Cycle dependency detected";
 
         private readonly Stack<Type> _stackTypeTrace = new();
         private readonly Stack<Type> _stackSkipTrace = new();

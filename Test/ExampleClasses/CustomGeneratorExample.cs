@@ -2,14 +2,13 @@
 {
     class CustomGeneratorExample
     {
-        public string City { get; set; }
-        public string Name { get; }
+        public string CarBrands { get; set; }
 
         public string RandomString { get; set; }
 
-        public CustomGeneratorExample(string name)
+        public CustomGeneratorExample(string CarBrand)
         {
-            Name = name;
+            CarBrands = CarBrand;
         }
     }
 }
